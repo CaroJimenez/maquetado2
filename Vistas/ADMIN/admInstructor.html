@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administar Instructor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+      .bar{
+    background-color: #029475;
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+
+body{
+    background: linear-gradient(60deg, #012d5f 50%, #029475 50% );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container-xl{
+    background-color: white;
+    margin-top: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+thead{
+    font-size: 22px;
+}
+
+i{
+    font-size: 33px;
+}
+
+table{
+    background-color: white;
+}
+
+.title{
+    color: aliceblue;
+    text-align: center;
+    margin: 20px;
+}
+
+.myButton{
+    color: #fff;
+    border: none;
+    background-color: #012d5f;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: auto;
+    font-size: 15px;
+}
+
+.card{
+    box-shadow: inset;
+}
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+       <div>
+        <i class="bi bi-person-circle"></i>
+       </div>
+       <div>
+        <h1>SITAE</h1>
+       </div>
+       <div>
+        <i class="bi bi-list"></i>
+       </div>
+    </div>
+   <div class="container" >
+    <div>
+        
+    </div>
+    <div>
+        <h2>+INSTRUCTORES</h2>  
+    </div>
+    <div class="add">
+        <button  type="button" class="btn btn-primary">
+            Agregar
+        </button>
+    </div>
+   </div>
+   <div class="container-xl">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE(S)</th>
+            <th scope="col">APELLIDOS</th>
+            <th scope="col">FECHA DE NACIMIENTO</th>
+            <th scope="col">CURP</th>
+            <th scope="col">CORREO ELECTRONICO</th>
+            <th scope="col">NUMERO EMPLEADO</th>
+            <th scope="col">OPCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Alexis</td>
+            <td>Noriega</td>
+            <td>16/12/2001</td>
+            <td>1234567890qwertyui</td>
+            <td>20213tn032</td>
+            <td>AlexisGato@gmail.com</td>
+            <td>
+                <button  type="button" class="btn btn-primary">
+                    Editar
+                </button>
+                <button onclick="showAlert()" type="button" class="btn btn-danger">
+                    Eliminar
+                </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   </div>
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+   <script>
+      const showAlert = () =>{
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: "Eliminarás el Instructor!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Eliminar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Eliminado',
+            'Instructor Eliminado',
+            'success'
+          )
+        }
+      })
+}
+   </script>
+</body>
+</html>
