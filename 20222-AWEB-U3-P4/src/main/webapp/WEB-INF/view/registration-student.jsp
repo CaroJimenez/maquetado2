@@ -1,0 +1,105 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: xemma
+  Date: 03/08/2022
+  Time: 10:20 a. m.
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registrarse</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Century Gothic;
+        }
+
+        body{
+            display: flex;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(60deg , #012d5f 50%, #029475 50%);
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            background-color: #d9d9d9;
+            text-align: center;
+            padding: 30px 15px;
+            -webkit-box-shadow: 7px -6px 0px 7px #A6A6A6;
+            box-shadow: 7px -6px 0px 7px #A6A6A6;
+            border-radius: 19px;
+        }
+
+        h1{
+            margin: 20px;
+            color: #545454;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+
+        .tittle{
+            color: black;
+        }
+
+        input{
+            border: none;
+            background-color: #a6a6a6;
+            margin: 7px;
+            border-radius: 3px;
+            padding: 4px;
+        }
+
+        button{
+            color: #fff;
+            border: none;
+            background-color: #012d5f;
+            padding: 10px 15px;
+            cursor: pointer;
+            width: auto;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<h1 class="tittle">SITAE</h1>
+
+<!--Registrarse-->
+<form action="registration-student" method="post" style="width: 400px;">
+
+    <h1 class="log-in">Registrarse</h1>
+    <!--Ingresar usuario-->
+    <input type="text" id="matricula" placeholder="Matricula*"><br>
+    <input type="text" id="nombre" placeholder="Nombre(s)*">
+    <input type="text" id="apellido1" placeholder="Apellido Paterno*">
+    <input type="text" id="apellido2" placeholder="Apellido Materno*">
+<%--<input type="date" id="fechaNacimiento" placeholder="Fecha de Nacimiento*">--%>
+    <input type="text" id="curp" placeholder="Curp*">
+    <input type="email" id="correo" placeholder="Correo Institucional*" >
+    <input type="password" id="contrasenia" placeholder="Contraseña*">
+    <br>
+    <button>Registrarse</button><br>
+    <p>Ya tienes una cuenta? <a href="">Iniciar Sesión</a></p>
+    </form>
+    </div>
+    </body>
+    </html>
